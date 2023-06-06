@@ -214,3 +214,88 @@ Both `require()` and `require_once()` functions are used to include a file in PH
 | integer | object   | NULL     |
 | float   |          |          |
 | boolean |          |          |
+
+### 31. How can a text be printed in PHP?
+
+A text can be printed in PHP using the `echo` or `print` statement. The syntax for `echo` statement is:
+
+```php
+echo "Hello World!";
+```
+
+The syntax for `print` statement is:
+
+```php
+print "Hello World!";
+```
+
+### 32. How can a text be printed without using `echo` or `print`?
+
+A text can be printed without using `echo` or `print` by using the `<?= ?>` shorthand. The `<?= ?>` shorthand is equivalent to `<?php echo ?>`.
+
+### 33. Is it possible to set infinite execution time for PHP script?
+
+Yes! It is possible to set infinite execution time for PHP script. The `set_time_limit()` function is used to set the maximum execution time for a PHP script. The syntax for `set_time_limit()` function is:
+
+```php
+set_time_limit(seconds)
+```
+
+### 34. What is the usecase of the `__autoload()` function in PHP?
+
+The `__autoload()` function is used to automatically load classes. It accepts one parameter which is the name of the class. The syntax for `__autoload()` function is:
+
+```php
+__autoload(classname)
+```
+
+### 35. What is the usecase of the `__construct()` function in PHP?
+
+The `__construct()` function is used to initialize an object. It is called automatically when an object is created.
+
+### 36. What is the usecase of the `__destruct()` function in PHP?
+
+The `__destruct()` function is used to destroy an object. It is called automatically when an object is destroyed.
+
+### 37. What are the popular Content Management Systems (CMS) written in PHP?
+
+Some of the popular Content Management Systems (CMS) written in PHP are:
+
+1. WordPress: https://wordpress.org/
+2. Joomla: https://www.joomla.org/
+3. Drupal: https://www.drupal.org/
+4. Magento: https://magento.com/
+5. MediaWiki: https://www.mediawiki.org/
+6. PrestaShop: https://www.prestashop.com/
+7. OpenCart: https://www.opencart.com/
+8. Moodle: https://moodle.org/
+9. phpBB: https://www.phpbb.com/
+10. Typo3: https://typo3.org/
+
+### 38. What are the differnet types of comments in PHP?
+
+There are three types of comments in PHP:
+
+1. Single-line comments: Single-line comments start with `//` and end with a newline character.
+2. Multi-line comments: Multi-line comments start with `/*` and end with `*/`.
+3. Doc comments: Doc comments start with `/**` and end with `*/`. They are used to document the code.
+
+### 39. Differentiate between an indexed array and an associative array with examples.
+
+An indexed array is an array with a numeric index. The index starts from 0. The values are stored and accessed in linear fashion. An associative array is an array with named keys. The keys can be strings or numbers. The values are stored and accessed by using the keys.
+
+```php
+// Indexed array
+$colors = array("Red", "Green", "Blue");
+
+// Associative array
+$colors = array("R" => "Red", "G" => "Green", "B" => "Blue");
+```
+
+### 40. What is the usecase of the `compact()` function in PHP?
+
+The `compact()` function is used to create an array from variables and their values. It accepts one or more parameters which are the names of the variables. The syntax for `compact()` function is:
+
+```php
+compact(var1, var2, ...)
+```
