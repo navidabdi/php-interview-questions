@@ -46,14 +46,14 @@ Both `GET` and `POST` are used to send data from the client to the server. The d
 
 There are eight types of variables present in PHP:
 
-1. Integers: Integers are whole numbers, without a decimal point, like 4195.
-2. Doubles: Doubles are floating-point numbers, like 3.14159 or 49.1.
-3. Booleans: Booleans have only two possible values either true or false.
-4. NULL: NULL is a special type that only has one value: NULL.
-5. Strings: Strings are sequences of characters, like 'PHP supports string operations.'
-6. Arrays: Arrays are named and indexed collections of other values.
-7. Objects: Objects are instances of programmer-defined classes, which can package up both other kinds of values and functions that are specific to the class.
-8. Resources: Resources are special variables that hold references to resources external to PHP (such as database connections).
+1. **Integers**: Integers are whole numbers, without a decimal point, like 4195.
+2. **Doubles**: Doubles are floating-point numbers, like 3.14159 or 49.1.
+3. **Booleans**: Booleans have only two possible values either true or false.
+4. **NULL**: NULL is a special type that only has one value: NULL.
+5. **Strings**: Strings are sequences of characters, like 'PHP supports string operations.'
+6. **Arrays**: Arrays are named and indexed collections of other values.
+7. **Objects**: Objects are instances of programmer-defined classes, which can package up both other kinds of values and functions that are specific to the class.
+8. **Resources**: Resources are special variables that hold references to resources external to PHP (such as database connections).
 
 ### 10. What are the variable-name rules in PHP?
 
@@ -65,3 +65,12 @@ The rules for naming variables in PHP are:
 4. Variable names are case-sensitive ($age and $AGE are two different variables).
 5. Variable names should be short yet descriptive.
 6. PHP variable names are not typed, that is, they do not need to be declared with any particular type, and can even change type after they have been set.
+
+### 11. What is `NULL` in PHP?
+
+`NULL` is a special data type in PHP that can have only one value: NULL. A variable of data type NULL is a variable that has no value assigned to it. If a variable is created without a value, it is automatically assigned a value of NULL.
+
+### 12. What is the difference between `==` and `===`?
+
+`==` is used to compare two variables which **may or may not** have the same data type.
+`===` is used to compare two variables which **must** have the same data type.
