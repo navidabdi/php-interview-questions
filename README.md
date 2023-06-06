@@ -73,4 +73,144 @@ The rules for naming variables in PHP are:
 ### 12. What is the difference between `==` and `===`?
 
 `==` is used to compare two variables which **may or may not** have the same data type.
+
 `===` is used to compare two variables which **must** have the same data type.
+
+### 13. How a constant is defined in PHP?
+
+A constant is a name or an identifier for a simple value. A constant name starts with a letter or underscore (no $ sign before the constant name). To define a constant, use the `define()` function. The syntax for defining a constant is:
+
+```php
+define(name, value, case-insensitive)
+```
+
+### 14. What is the usecase of `constant()` function in PHP?
+
+The `constant()` function is used to get the value of a constant. It accepts one parameter which is the name of the constant. The syntax for `constant()` function is:
+
+```php
+constant(name)
+```
+
+### 15. What are the magic constants in PHP?
+
+Magic constants are the predefined constants in PHP that change based on their use. They start with two underscores (**) followed by the name of the constant and end with two underscores. For example, `**LINE\_\_` is a magic constant that returns the current line number of the file.
+
+Some of the magic constants in PHP are:
+
+1. `__LINE__`: Returns the current line number of the file.
+2. `__FILE__`: Returns the full path and filename of the file.
+3. `__DIR__`: Returns the directory of the file.
+4. `__FUNCTION__`: Returns the function name.
+5. `__CLASS__`: Returns the class name.
+6. `__TRAIT__`: Returns the trait name.
+7. `__METHOD__`: Returns the class method name.
+8. `__NAMESPACE__`: Returns the namespace name.
+
+### 16. What is the difference between variables and constants in PHP?
+
+Here are the differences between variables and constants in PHP:
+
+1. Variables can be redefined but constants cannot be redefine.
+2. The default scope of a variable is local but the default scope of a constant is global.
+3. The $ sign is used to declare a variable but constants are declared with the `define()` function.
+
+### 17. What does the phrase "PHP escape" mean?
+
+"PHP escape" is a mechanism to prevent special characters from being interpreted as part of the PHP code. It is used to prevent SQL injection, XSS, and other types of attacks. The PHP escape character is the backslash (\). It can be used before a single quote, double quote, backslash, and NUL (the NULL byte).
+
+### 18. What is the difference between PHP4 and PHP5?
+
+The difference between PHP4 and PHP5 are (comparison table):
+
+| PHP4                                                 | PHP5                                         |
+| ---------------------------------------------------- | -------------------------------------------- |
+| PHP4 does not support OOP.                           | PHP5 supports OOP.                           |
+| PHP4 does not support exceptions.                    | PHP5 supports exceptions.                    |
+| PHP4 does not support interfaces.                    | PHP5 supports interfaces.                    |
+| PHP4 does not support visibility.                    | PHP5 supports visibility.                    |
+| PHP4 does not support static methods and properties. | PHP5 supports static methods and properties. |
+| PHP4 does not support overloading.                   | PHP5 supports overloading.                   |
+| PHP4 does not support type hinting.                  | PHP5 supports type hinting.                  |
+| PHP4 does not support constructors and destructors.  | PHP5 supports constructors and destructors.  |
+| PHP4 does not support cloning.                       | PHP5 supports cloning.                       |
+| PHP4 does not support call-time pass-by-reference.   | PHP5 supports call-time pass-by-reference.   |
+| PHP4 does not support the SimpleXML extension.       | PHP5 supports the SimpleXML extension.       |
+| PHP4 does not support the DOM extension.             | PHP5 supports the DOM extension.             |
+| PHP4 does not support the SQLite extension.          | PHP5 supports the SQLite extension.          |
+| PHP4 does not support the MySQLi extension.          | PHP5 supports the MySQLi extension.          |
+| PHP4 does not support the SOAP extension.            | PHP5 supports the SOAP extension.            |
+
+### 19. How are two objects compared in PHP?
+
+Two objects are compared in PHP using the `==` operator. If two objects are compared using the `==` operator, PHP will compare their attributes. If two objects are compared using the `===` operator, PHP will compare their references.
+
+### 20. What is the meaning of `break` and `continue` statements in PHP?
+
+The `break` statement is used to exit from a loop. The `continue` statement is used to skip the current iteration of a loop and continue with the next iteration.
+
+### 21. What are some of the popular PHP frameworks?
+
+Some of the popular PHP frameworks are (with their official websites):
+
+1. Laravel: https://laravel.com/
+2. Symfony: https://symfony.com/
+3. CodeIgniter: https://codeigniter.com/
+4. CakePHP: https://cakephp.org/
+5. Zend Framework: https://framework.zend.com/
+6. Yii Framework: https://www.yiiframework.com/
+7. Phalcon: https://phalconphp.com/
+8. FuelPHP: https://fuelphp.com/
+9. Slim: https://www.slimframework.com/
+10. PHPixie: https://phpixie.com/
+
+### 22. What is the usecase of the `final` class and the `final` method in PHP?
+
+The `final` keyword is used to prevent inheritance. If a class is marked as `final`, it cannot be extended. If a method is marked as `final`, it cannot be overridden.
+
+### 23. How does JavaScript interact with PHP?
+
+JavaScript is a client-side language and PHP is a server-side language. JavaScript can send and receive data from PHP using AJAX. AJAX stands for Asynchronous JavaScript and XML. It is a set of web development techniques using many web technologies on the client-side to create asynchronous web applications. In other words, it is the use of the XMLHttpRequest object to communicate with servers.
+
+### 24. Does PHP intract whit HTML?
+
+Yes! HTML and PHP intraction is the core of waht makes PHP so popular. PHP can be used to generate HTML code dynamically. PHP can be used to create, read, write, delete, and close files on the server. PHP can be used to send and receive cookies. PHP can be used to add, delete, modify data in your database.
+
+### 25. What is the difference between `print_r()` and `var_dump()`?
+
+`print_r()` displays information about a variable in a way that's readable by humans. `var_dump()` displays structured information about one or more expressions that includes its type and value. `var_dump()` is used for debugging purposes while `print_r()` is used for displaying information about a variable.
+
+### 26. What are the types of arrays supported by PHP?
+
+There are three types of arrays supported by PHP:
+
+1. **Indexed arrays**: Arrays with a numeric index.
+2. **Associative arrays**: Arrays with named keys.
+3. **Multidimensional arrays**: Arrays containing one or more arrays.
+
+### 27. How does the `foreach()` loop work in PHP?
+
+The `foreach()` loop works only on arrays and objects. It is used to loop through each key/value pair in an array. The syntax for `foreach()` loop is:
+
+```php
+foreach ($array as $key => $value) {
+  // code to be executed;
+}
+```
+
+### 28. What is the difference between `array()` and `[]`?
+
+`array()` is a language construct while `[]` is a language construct as well as a function. `array()` can be used to create an array while `[]` can be used to create an array as well as access an array element.
+
+### 29. What is the difference between `require()` and `require_once()` functions?
+
+Both `require()` and `require_once()` functions are used to include a file in PHP. The difference between `require()` and `require_once()` is that `require()` will emit a fatal error if the file is not found while `require_once()` will not emit a fatal error if the file is not found.
+
+### 30. What are the data types supported by PHP?
+
+| Scalar  | Compound | Special  |
+| ------- | -------- | -------- |
+| string  | array    | resource |
+| integer | object   | NULL     |
+| float   |          |          |
+| boolean |          |          |
