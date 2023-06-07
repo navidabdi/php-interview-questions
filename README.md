@@ -297,3 +297,186 @@ The `compact()` function is used to create an array from variables and their val
 ```php
 compact(var1, var2, ...)
 ```
+
+### 41. What is the difference between ASP.NET and PHP?
+
+| ASP.NET                                     | PHP                                |
+| ------------------------------------------- | ---------------------------------- |
+| A programming framework                     | A Scripting language               |
+| Developed by Microsoft                      | Developed by Rasmus Lerdorf        |
+| Supports languages such as C#, VB.NET, etc. | Supports only PHP                  |
+| Runs on Windows only                        | Runs on Windows, Linux, Unix, etc. |
+| Proprietary                                 | Open-source                        |
+| Compiled                                    | Interpreted                        |
+
+### 42. What is a session in PHP?
+
+A session is a way to store information (in variables) to be used across multiple pages. Unlike a cookie, the information is not stored on the user's computer. A session is started using the `session_start()` function. The syntax for `session_start()` function is:
+
+```php
+session_start()
+```
+
+### 43. What is a cookie in PHP?
+
+A cookie is a small file that the server embeds on the user's computer. Each time the same computer requests a page with a browser, it will send the cookie too. With PHP, you can both create and retrieve cookie values. A cookie is created using the `setcookie()` function. The syntax for `setcookie()` function is:
+
+```php
+setcookie(name, value, expire, path, domain, secure, httponly)
+```
+
+### 44. What is the difference between `session` and `cookie` in PHP?
+
+| Session                                                                                  | Cookie                                                                  |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| A session is a way to store information (in variables) to be used across multiple pages. | A cookie is a small file that the server embeds on the user's computer. |
+| The information is not stored on the user's computer.                                    | The information is stored on the user's computer.                       |
+| A session is started using the `session_start()` function.                               | A cookie is created using the `setcookie()` function.                   |
+| A session is deleted when the user closes the browser.                                   | A cookie is deleted based on the lifetime of the cookie.                |
+
+### 45. Is typecasting supported in PHP?
+
+Yes! Typecasting is supported in PHP. Typecasting is the process of converting one data type into another. There are two types of typecasting in PHP:
+
+1. **Implicit typecasting**: Implicit typecasting is done automatically by PHP. For example, converting a string to an integer.
+2. **Explicit typecasting**: Explicit typecasting is done manually by the programmer. For example, converting a string to an integer using the `intval()` function.
+
+### 46. Can a form be submitted without using a submit button in PHP?
+
+Yes! A form can be submitted without using a submit button in PHP. The `submit()` method is used to submit a form using JavaScript. The syntax for `submit()` method is:
+
+```php
+form.submit()
+```
+
+### 47. What is the usecase of the `htmlspecialchars()` function in PHP?
+
+The `htmlspecialchars()` function is used to convert some predefined characters to HTML entities. It accepts one parameter which is the string to be converted. The syntax for `htmlspecialchars()` function is:
+
+```php
+htmlspecialchars(string)
+```
+
+### 48. Does PHP support variable length argument functions?
+
+Yes! PHP supports variable length argument functions. This simply means that you can pass any number of arguments to a function. The syntax simply involves using three dots (...) before the parameter name. For example:
+
+```php
+function sum(...$numbers) {
+  $sum = 0;
+  foreach ($numbers as $n) {
+    $sum += $n;
+  }
+  return $sum;
+}
+
+echo sum(1, 2, 3, 4, 5);
+
+// Output: 15
+```
+
+### 49. What is the usecase of `session_start()` and `session_destroy()` functions in PHP?
+
+The `session_start()` function is used to start a session. The `session_destroy()` function is used to destroy a session. The syntax for `session_start()` function is:
+
+```php
+session_start()
+```
+
+The syntax for `session_destroy()` function is:
+
+```php
+session_destroy()
+```
+
+### 50. What is the usecase of the `header()` function in PHP?
+
+The `header()` function is used to send a raw HTTP header to a client. It accepts one parameter which is the header to be sent. The syntax for `header()` function is:
+
+```php
+header(header)
+```
+
+### 51. How can you open a file in PHP?
+
+A file can be opened in PHP using the `fopen()` function. It accepts two parameters which are the name of the file and the mode in which to open the file. The syntax for `fopen()` function is:
+
+```php
+fopen(filename, mode)
+```
+
+### 52. What are the different types of errors in PHP?
+
+There are four different types of errors in PHP:
+
+1. **Parse error**: A parse error occurs when the PHP parser is unable to understand the code. For example, missing semicolon, missing parenthesis, etc.
+2. **Fatal error**: A fatal error occurs when the PHP parser understands the code but is unable to execute it. For example, calling an undefined function, accessing a private method, etc.
+3. **Warning error**: A warning error occurs when the PHP parser understands and executes the code but encounters a problem. For example, using a deprecated function, using an undefined variable, etc.
+4. **Notice error**: A notice error occurs when the PHP parser understands and executes the code but encounters a problem. For example, using a variable that has not been initialized, using an undefined index, etc.
+
+### 53. How can you get the IP address of the client in PHP?
+
+The IP address of the client can be obtained using the `$_SERVER['REMOTE_ADDR']` variable.
+
+### 54. What is the usecase of $message and $$message in PHP?
+
+Both `$message` and `$$message` are variables in PHP. The difference between `$message` and `$$message` is that `$message` is a simple variable while `$$message` is a variable variable. A variable variable takes the value of a variable and treats that as the name of a variable.
+
+Consider the following example:
+
+```php
+$message = "Hello World";
+$$message = "Hello PHP";
+
+echo $message; // Output: Hello World
+echo $$message; // Output: Hello PHP
+echo $Hello World; // Output: Hello PHP
+```
+
+### 55. Differentiate between GET and POST methods in PHP.
+
+| GET Method                                                                     | POST Method                                                                                |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| GET method is used to send a small amount of data.                             | POST method is used to send a large amount of data.                                        |
+| GET method is not secure because data sent is part of the URL.                 | POST method is secure because data sent is not part of the URL.                            |
+| GET method is less robust because data sent is limited by the URL length.      | POST method is more robust because data sent is not limited by the URL length.             |
+| GET method is less secure because data sent is visible to everyone in the URL. | POST method is more secure because data sent is not visible to everyone in the URL.        |
+| GET method is not suitable for sending sensitive information.                  | POST method is suitable for sending sensitive information.                                 |
+| The $\_GET variable is used to collect values in a form with method="get".     | The $\_POST variable is used to collect values in a form with method="post".               |
+| QUERY_STRING is used to collect values in a form with method="get".            | The HTTP protocol and the headers are used to collect values in a form with method="post". |
+| GET does not support binary data.                                              | POST supports binary data as well as ASCII data.                                           |
+| The GET method can only send a maximum of 1024 bytes.                          | The POST method has no restriction on data size to be sent.                                |
+
+### 56. What is the usecase of the `$_SERVER` variable in PHP?
+
+The `$_SERVER` variable is a superglobal variable in PHP. It is used to collect information about the server, headers, paths, and script locations. The `$_SERVER` variable is an array containing information such as headers, paths, and script locations. The entries in this array are created by the web server. There is no guarantee that every web server will provide any of these.
+
+### 57. What is the usecase of "lambda functions" in PHP?
+
+A lambda function is an anonymous function. It is a function that is defined without a name. It is used to create a function that can be used without naming it. The lambda function is used to first store the data in a variable and then to pass it as an argument to another function or method.
+
+consider the following example:
+
+```php
+$add = function($a, $b) {
+  return $a + $b;
+};
+
+echo $add(1, 2); // Output: 3
+```
+
+### 58. What is the difference between compile-time and run-time exceptions in PHP?
+
+- **Compile-time exceptions**: Compile-time exceptions are the exceptions that are thrown at compile-time. For example, syntax errors, parse errors, etc.
+- **Run-time exceptions**: Run-time exceptions are the exceptions that are thrown at run-time. For example, division by zero, calling an undefined function, etc.
+
+### 59. What is the meaning of type hinting in PHP?
+
+Type hinting is a feature introduced in PHP 5. It is used to specify the data type of a parameter in a function declaration. This ensures that the function will be called with the correct data type for the parameter. If the function is called with an incorrect data type for the parameter, a fatal error will be thrown.
+
+### 60. How is a URL connected to a PHP script?
+
+- Any URL can be connected to PHP easily by making use of the library called cURL.
+- The cURL library is used to connect to a URL and make requests to the server.
+- This comes as a default library in PHP.
+- The term `cURL` stands for client-side URL, allowing users to connect to a server and make requests in order to get the data they need.
