@@ -507,3 +507,167 @@ isset(variable)
 ### 64. Is multiple inheritance supported in PHP?
 
 No! Multiple inheritance is not supported in PHP. Multiple inheritance is the process of deriving a class from more than one base class. PHP only supports single inheritance.
+
+### 65. What is the use of `func_num_args()` function in PHP?
+
+The `func_num_args()` function is used to get the number of arguments passed to a function.
+
+### 66. Name some common applications of PHP.
+
+Some common applications of PHP are:
+
+1. System functions
+2. Form handling
+3. CRUD tasks (Create, Read, Update, Delete)
+4. Accessing cookies variables and setting cookies
+5. Data encryption
+
+### 67. How to connect to a database using PHP?
+
+A database can be connected using PHP by using the `mysqli_connect()` function. The syntax for `mysqli_connect()` function is:
+
+```php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+```
+
+### 68. What does final class and final method mean in PHP?
+
+Example of final class:
+
+```php
+final class BaseClass {
+  public function test() {
+    echo "BaseClass::test() called";
+  }
+
+  // Here it doesn't matter if you specify the function as final or not
+  final public function moreTesting() {
+    echo "BaseClass::moreTesting() called";
+  }
+}
+
+class ChildClass extends BaseClass {
+  public function moreTesting() {
+    echo "ChildClass::moreTesting() called";
+  }
+}
+
+// Results in Fatal error: Cannot override final method BaseClass::moreTesting()
+```
+
+Example of final method:
+
+```php
+class BaseClass {
+  public function test() {
+    echo "BaseClass::test() called";
+  }
+
+  final public function moreTesting() {
+    echo "BaseClass::moreTesting() called";
+  }
+}
+
+class ChildClass extends BaseClass {
+  public function moreTesting() {
+    echo "ChildClass::moreTesting() called";
+  }
+}
+
+// Results in Fatal error: Cannot override final method BaseClass::moreTesting()
+```
+
+### 69. How does Exepction handling work in PHP?
+
+Exception handling is used to change the normal flow of the code execution if a specified error (exceptional) condition occurs. This condition is called an exception. PHP has an exception model similar to that of other programming languages. An exception can be thrown, and caught ("catched") within PHP. Code may be surrounded in a try block, to facilitate the catching of potential exceptions. Each try must have at least one corresponding catch block. Multiple catch blocks can be used to catch different classes of exceptions. Normal execution (when no exception is thrown within the try block, or when a catch matching the thrown exception's class is not present) will continue after that last catch block defined in sequence. Exceptions can be thrown (or re-thrown) within a catch block.
+
+Consider the following example:
+
+```php
+function inverse($x) {
+  if (!$x) {
+    throw new Exception('Division by zero.');
+  }
+  else return 1/$x;
+}
+
+try {
+  echo inverse(5) . "\n";
+  echo inverse(0) . "\n";
+} catch (Exception $e) {
+  echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// Output:
+// 0.2
+// Caught exception: Division by zero.
+```
+
+### 70. How to call a function by reference in PHP?
+
+A function can be called by reference in PHP by using the `&` operator. The syntax for calling a function by reference is:
+
+```php
+function add(&$num) {
+  $num++;
+}
+
+$num = 1;
+add($num);
+echo $num; // Output: 2
+```
+
+### 71. Create a singleton class in PHP.
+
+A singleton class is a class that can have only one instance. It is used to control the object creation by keeping a private constructor. The singleton class is used to create a single object that can be shared across multiple classes. The singleton class is used to create a single object that can be shared across multiple classes.
+
+Consider the following example:
+
+```php
+class Singleton {
+  private static $instance;
+
+  private function __construct() {}
+
+  public static function getInstance() {
+    if (!self::$instance) {
+      self::$instance = new self();
+    }
+    return self::$instance;
+  }
+}
+
+$singleton = Singleton::getInstance();
+```
+
+### 72. How to encrypt a password using PHP?
+
+A password can be encrypted using PHP by using the `password_hash()` function. The syntax for `password_hash()` function is:
+
+```php
+$password_string = "password$123";
+$password_hash = password_hash($password_string, PASSWORD_DEFAULT);
+```
+
+### 73. What is the output of the following code?
+
+```php
+$a = '1';
+$b = &$a;
+$b = "2$b";
+echo $a.", ".$b;
+
+// The output of the above code is:
+// 21, 21
+```
