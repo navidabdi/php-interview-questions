@@ -480,3 +480,30 @@ Type hinting is a feature introduced in PHP 5. It is used to specify the data ty
 - The cURL library is used to connect to a URL and make requests to the server.
 - This comes as a default library in PHP.
 - The term `cURL` stands for client-side URL, allowing users to connect to a server and make requests in order to get the data they need.
+
+### 61. What are the steps to create a new database using PHP and MySQL?
+
+- The first step is to connect to the MySQL server by using the `mysql_connect()` function.
+- The second step is to create a new database by using the `mysql_create_db()` function.
+- The third step is to select the database by using the `mysql_select_db()` function.
+- The fourth step is to create a table by using the `mysql_query()` function.
+
+### 62. How does string concatenation work in PHP?
+
+String concatenation is the process of joining two or more strings together. In PHP, string concatenation is done using the `.` operator. For example:
+
+```php
+echo "Hello" . " " . "World"; // Output: Hello World
+```
+
+### 63. How to check if defined variable is NULL in PHP?
+
+The `isset()` function is used to check if a variable is set and is not NULL. The syntax for `isset()` function is:
+
+```php
+isset(variable)
+```
+
+### 64. Is multiple inheritance supported in PHP?
+
+No! Multiple inheritance is not supported in PHP. Multiple inheritance is the process of deriving a class from more than one base class. PHP only supports single inheritance.
