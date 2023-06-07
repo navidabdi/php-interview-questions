@@ -1,4 +1,4 @@
-# PHP Interview Questions
+# PHP Interview Questions and Answers
 
 This is a list of PHP interview questions and answers for PHP developers. I have tried to cover all possible interview questions from PHP. If you have any questions or suggestions, please feel free to create an issue or pull request.
 
